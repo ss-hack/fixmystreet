@@ -5,6 +5,10 @@
 
 @import "../sass/base";
 
+body {
+    font-size: 13px;
+}
+
 a, a:visited {
     color: #369;
     &:hover, &:active {
@@ -33,14 +37,15 @@ h1.main {
 
 #site-header {
     background: $primary;
-    height: 57px;
+    height: 76px;
+    border-top-width: 4px;
 }
 
 // Colour tab to match colour scheme
 #nav-link {
   width: 50px;
   height: 48px;
-  background: url('/cobrands/eastsussex/tab-blue.png') 0 0 no-repeat;
+//  background: url('/cobrands/eastsussex/tab-blue.png') 0 0 no-repeat;
 }
 
 #problems-nav {
@@ -55,9 +60,14 @@ h1.main {
     }
 }
 
+#report-a-problem-sidebar .sidebar-notes a {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .big-green-banner {
     text-transform: none;
-    z-index: 0;
+    z-index: 5000;
 }
 
 #form_sign_in {
@@ -69,8 +79,17 @@ h1.main {
     margin: 0;
     padding: 1em;
 
+    #front-main-container {
+        text-align: center;
+    }
+
     #postcodeForm {
         padding: 1em;
+
+        label {
+            text-align: center;
+        }
+
         div {
             padding-top: 0px;
             input#pc {
@@ -79,5 +98,57 @@ h1.main {
                 height: 100%;
             }
         }
+    }
+}
+
+#mysociety {
+    h1, h2 {
+        text-align: center;
+    }
+}
+
+
+//.header {
+//    background: #004b7b url(img/mobile.jpg) repeat-x;
+//}
+
+body > p {
+    margin: 0;
+}
+
+.main-menu ul {
+    padding: 0;
+    margin: 6px;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        list-style: none;
+
+        a, span {
+            padding: 2px 6px;
+            margin: 3px;
+            border-radius: 3px;
+        }
+
+        a {
+            background-color: #00a1de;
+            color: white;
+        }
+
+        span {
+            background-color: #00a1de;
+            color: white;
+        }
+    }
+}
+
+.footer .languages ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: inline-block;
+        float: none !important;
     }
 }
