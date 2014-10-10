@@ -46,6 +46,15 @@ function tabs(elem, indirect) {
         //hide / show the right tab
         $('.tab.open').hide().removeClass('open');
         $(target).show().addClass('open');
+
+        // Clicking on tabs to show/hide pins
+        if (target == '#current_near' && document.getElementById('reporting') && !fixmystreet.markers.getVisibility()) {
+            $('#hide_pins_link').click();
+        }
+        if (target == '#reporting' && fixmystreet.markers.getVisibility()) {
+            $('#hide_pins_link').click();
+        }
+
     }
 }
 

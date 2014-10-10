@@ -1,0 +1,31 @@
+<menu id="problems-nav" class="tab-nav">
+    <ul>
+        <li><a href="#reporting">[% loc('Report a problem') %]</a></li>
+        <li><a href="#current_near">[% loc( 'Problems on the map' ) %]</a></li>
+    </ul>
+</menu>
+
+<div id="reporting" class="issue-list-a tab">
+
+<script>
+    fixmystreet.initial_hide_pins = true;
+</script>
+
+<h1>
+    [% loc( 'Click map to report a problem' ) %]
+</h1>
+
+<a id="skip-this-step" href="[% url_skip %]" rel="nofollow">
+    [% loc("Can't see the map? <em>Skip this step</em>") %]
+</a>
+
+<p>To report a new problem, please click on the map at the location of the
+problem. Don’t worry if it’s not in precisely the right place, you can move
+the pin afterwards.</p>
+
+</div>
+
+<ul id="current_near" class="issue-list-a tab">
+    [% INCLUDE "around/on_map_list_items.html" %]
+    [% INCLUDE "around/around_map_list_items.html" %]
+</ul>
