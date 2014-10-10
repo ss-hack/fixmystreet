@@ -10,7 +10,7 @@ use FixMyStreet;
 __PACKAGE__->config(
     TEMPLATE_EXTENSION => '.txt',
     INCLUDE_PATH       => [          #
-        FixMyStreet->path_to( 'templates', 'email', 'default' ),
+        FixMyStreet->path_to( 'templates', 'email', 'base' ),
     ],
     ENCODING       => 'utf8',
     render_die     => 1,

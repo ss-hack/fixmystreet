@@ -211,7 +211,7 @@ sub get_email_template {
     my $template_path = FixMyStreet->path_to( "templates", "email", $cobrand, $lang, $template )->stringify;
     $template_path = FixMyStreet->path_to( "templates", "email", $cobrand, $template )->stringify
         unless -e $template_path;
-    $template_path = FixMyStreet->path_to( "templates", "email", "default", $template )->stringify
+    $template_path = FixMyStreet->path_to( "templates", "email", "base", $template )->stringify
         unless -e $template_path;
     $template = Utils::read_file( $template_path );
     return $template;

@@ -364,7 +364,7 @@ sub send_email_cron {
     # signature and site names in emails using templates in the old style emails.
     # It's a bit involved as not everywhere we use it knows about the cobrand so
     # we can't assume there will be one.
-    my $include_path = FixMyStreet->path_to( 'templates', 'email', 'default' )->stringify;
+    my $include_path = FixMyStreet->path_to( 'templates', 'email', 'base' )->stringify;
     if ( $cobrand ) {
         $include_path =
             FixMyStreet->path_to( 'templates', 'email', $cobrand->moniker )->stringify . ':'
