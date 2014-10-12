@@ -350,6 +350,12 @@ sub send_email {
 
 sub send_email_cron {
     my ( $c, $params, $env_from, $env_to, $nomail, $cobrand, $lang_code ) = @_;
+    #use Data::Dumper;
+    #print "c " . Dumper($c);
+    #print "params " . Dumper($params->{'To'}[0][0]);
+    #print "env_from " . Dumper($env_from);
+    #print "env_to " . Dumper($env_to);
+    #print "nomail " . Dumper($nomail);
 
     return 1 if $c->is_abuser( $env_to );
 
@@ -391,6 +397,7 @@ sub send_email_cron {
         $sender->send( $email );
         return 0;
     } elsif (!$nomail) {
+        push @$env_to, $params->{'To'}[0][0];
         return mySociety::EmailUtil::send_email( $email, $env_from, @$env_to );
     } else {
         print $email;
