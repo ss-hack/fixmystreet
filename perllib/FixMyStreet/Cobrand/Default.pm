@@ -151,7 +151,7 @@ The name of the site
 
 =cut
 
-sub site_title { return 'FixMyStreet'; }
+sub site_title { return 'SparklingChennai'; }
 
 =head2 set_lang_and_domain
 

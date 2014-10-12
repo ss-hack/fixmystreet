@@ -7,25 +7,25 @@
 # have multiple config files and use a symlink to change between them.
 
 # PostgreSQL database details for FixMyStreet
-FMS_DB_HOST: 'localhost'
+FMS_DB_HOST: ''
 FMS_DB_PORT: '5432'
-FMS_DB_NAME: 'fms'
+FMS_DB_NAME: 'fixmystreet'
 FMS_DB_USER: 'fms'
 FMS_DB_PASS: ''
 
 # The base URL of the install.
-BASE_URL: 'http://www.example.org'
+BASE_URL: 'http://ec2-54-77-100-86.eu-west-1.compute.amazonaws.com'
 # Use the below if you're using the Catalyst development server
 #   BASE_URL: 'http://localhost:3000'
 
 # Email domain used for emails, and contact name/email for admin use.
-EMAIL_DOMAIN: 'example.org'
-CONTACT_EMAIL: 'team@example.org'
+EMAIL_DOMAIN: 'ec2-54-77-100-86.eu-west-1.compute.amazonaws.com'
+CONTACT_EMAIL: 'help@ec2-54-195-140-242.eu-west-1.compute.amazonaws.com'
 CONTACT_NAME: 'FixMyStreet'
 # Address used for emails you don't expect a reply to (e.g. confirmation
 # emails); can be same as CONTACT_EMAIL above, of course, if you don't have a
 # special address.
-DO_NOT_REPLY_EMAIL: 'do-not-reply@example.org'
+DO_NOT_REPLY_EMAIL: 'help@ec2-54-195-140-242.eu-west-1.compute.amazonaws.com'
 
 # Whether this is a development site or not. It will mean e.g. templates/
 # CSS modified times aren't cached
@@ -38,7 +38,7 @@ SEND_REPORTS_ON_STAGING: 0
 
 # What to use as front page/alert example places placeholder
 # Defaults to High Street, Main Street
-EXAMPLE_PLACES: [ 'High Street', 'Main Street' ]
+EXAMPLE_PLACES: [ 'Adyar', 'Porur' ]
 
 # An array of languages for the site, in the following format:
 # <language code>,<pretty name>,<locale>
@@ -48,7 +48,7 @@ LANGUAGES:
 
 # If you're running an installation that is being used in a different time zone
 # from the server, you can set the time zone here (standard time zone string)
-TIME_ZONE: ""
+TIME_ZONE: "Asia/Calcutta"
 
 # File locations for uploaded photos and cached geocoding results.
 UPLOAD_DIR: '../upload/'
@@ -121,7 +121,7 @@ GEOCODING_DISAMBIGUATION: ''
 # The type of map you want to use. If left blank, the default is OpenStreetMap.
 # Other options are currently pretty UK specific, including "FMS" for UK
 # FixMyStreet.
-MAP_TYPE: 'OSM'
+MAP_TYPE: 'GoogleOL'
 
 # FixMyStreet uses a templating cobrand system to provide different looks for
 # different installations. In the common case, if your templates are in the
